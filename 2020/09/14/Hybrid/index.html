@@ -81,7 +81,7 @@
         <!-- Intro 头部显示 e -->
         <!-- Header 头部logo start -->
         <header id="header">
-    <a href="/" class="logo">陈昊泽</a>
+    <a href="/" class="logo">HAOZE</a>
 </header>
         <!-- Nav 导航条 start -->
         <nav id="nav" class="special">
@@ -128,17 +128,19 @@
 
         <div id="main">
             <div class="post_page_title_img" style="height: 25rem;background-image: url(https://chen950203.github.io/7.png);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;">
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2>Hybrid Neural Network based on Feature Fusion for Vehicle Type Identification</h2></a>
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2>Vehicle Type Identification</h2></a>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <hr>
-<p>(本文摘译<a href="https://www.deeplearning.ai/" target="_blank" rel="noopener">“吴恩达老师的深度学习课程”</a>)</p>
-<h2 id="Data-structure-of-Neural-Network"><a href="#Data-structure-of-Neural-Network" class="headerlink" title="Data structure of Neural Network"></a>Data structure of Neural Network</h2><p>当实现一个神经网络的时候，需要知道一些非常重要的技术和技巧。例如有一个包含$m$个样本的训练集，你很可能习惯于用一个<strong>for</strong>循环来遍历训练集中的每个样本，但是当实现一个神经网络的时候，我们通常不直接使用<strong>for</strong>循环来遍历整个训练集。</p>
-<p>另外在神经网络的计算中，通常先有一个叫做前向暂停(<strong>forward pause</strong>)或叫做前向传播(<strong>foward propagation</strong>)的步骤，接着有一个叫做反向暂停(<strong>backward pause</strong>) 或叫做反向传播<strong>(backward propagation</strong>)的步骤。</p>
-<p>使用逻辑回归(l<strong>ogistic regression</strong>)来传达这些想法，以使更加容易地理解这些概念。</p>
-<p>逻辑回归是一个用于二分类(<strong>binary classification</strong>)的算法。首先从一个问题开始说起，这里有一个二分类问题的例子，假如有一张图片作为输入，比如这只猫，如果识别这张图片为猫，则输出标签1作为结果；如果识别出不是猫，那么输出标签0作为结果。现在可以用字母 $y$来 表示输出的结果标签，如下图所示：</p>
-<p><img src="//chen950203.github.io/2020/09/14/Hybrid/8.jpg" alt></p>
+                <p>##<strong><em>Abstract：</em></strong><br>Due to the audio information of different types of vehicle models are distinct, vehicle information can be identified by the audio signal of vehicle accurately. In real life, in order to determine the type of vehicle, we do not need to obtain the visual information of vehicles and just need to obtain the audio information. In this paper, we extract the fusion feature from different aspects: Mel frequency cepstrum coefficients in perceptual characteristics, pitch class profile in psychoacoustic characteristics and short-term energy in acoustic characteristics. In addition, we improve the performance of neural network classifier by fusing long short-term memory (LSTM) unit into the convolutional neural networks. At last, we put the fusion feature to the hybrid neural networks to recognize different vehicles. The results suggest that the fusion feature we proposed in this paper can increase the recognition rate by 7%; and LSTM has great advantages in modeling time series, adding LSTM to the networks can improve the recognition rate of 3.39%.</p>
+<p><strong>*Keywords</strong>—vehicle audio signals, fused feature, LSTM, convolutional neural networks, hybrid neural networks, identification system*</p>
+<p>##<strong>I.INTRODUCTION</strong><br><br>In modern transportation system, the application of classifying different vehicle types is quite crucial in daily life, such as intelligent monitoring system, auto-charging system and illegal preemption of way detection [1]. But in real life, it is not possible to capture vehicle images clearly due to complex lighting and harsh weather. The effect of vehicle identification by acquiring the images is not satisfied.<br>The collection of audio is not affected by harsh weather, such as fog and heavy rain. Identification system using vehicle audio is very robust. And it is more convenient than the image collection. Wu showed that support vector machine is suitable for classification [2]. Zhao H.X. [3] identified the vehicle type using feature fusion. Inagaki k et al. showed that using Recurrent Neural Network (RNN) can classify vehicle types accurately [4]. Zhou studied how to extract vibration signal feature to classify different vehicles [5]. Fan of Tsinghua University studied composed wavelet transform and mutual information to recognize different types of vehicles [6]. The vehicle type identification based on audio signals divide into two processes: feature extraction and the identification. Feature extraction is the process that extracting more comprehensive information from vehicle audio signals; after extracting, a suitable classifier is designed to identify different vehicles.</p>
+<p>##<strong>II.EXTRACTING VEHICLE AUDIO FEATURES</strong><br><br>Acoustic characteristics, perceptual characteristics and psychoacoustic characteristics make up audio characteristics [7]. Time and frequency domain parameters constitute acoustic characteristics, including the short-time energy, the short-time autocorrelation function, and the short-time zero crossing rate and so on. Perceptual characteristics are the parameters extracted from human auditory, including the Mel Frequency Cepstrum Coefficients, and its first-order and second-order differential which are used to reflect the dynamic characteristics. Psychoacoustic characteristics include loudness, roughness and pitch class profile etc.<br><br><strong><em>A.Mel Frequency Cepstrum Coefficient (MFCC)</em></strong><br><br>MFCC was first used in the field of automatic speech recognition (ASR) and speaker recognition [8]. MFCC is a kind of cepstral coefficient based on Mel frequency. The conversion formula can be expressed as:<br></p>
+<center>*Mel(f)=2529lg(1+f/700)                    (1)*</center>
+Where, *f* is the frequency.
+After the pre-processing of vehicle audio signals, MFCC vector will be extracted from each frame in the form of vector group. Fast Fourier transform (FFT) is applied to each frame of the audio signals before sending to Mel filter where the original spectrum is transformed into Mel frequency spectrum. Then logarithmic transformation and discrete cosine transform are applied to the spectrum to form MFCC vectors. Equation (2) to (5) reflect the entire transformation process. Fig.1. shows the process of extracting MFCC.<br>
+![](./Hybrid/MFCC.jpg)
+<center>*Mel(f)=2529lg(1+f/700) (1)*</center>
 
             </div>
 

@@ -96,7 +96,7 @@
 	            <a href="#s1">分类</a>
 	                    <ul class="submenu">
 	                        <li>
-	                        <a class="category-link" href="/categories/DEEP-LEARNING/">DEEP LEARNING</a></li><li><a class="category-link" href="/categories/练习题/">练习题</a></li><li><a class="category-link" href="/categories/随笔/">随笔</a>
+	                        <a class="category-link" href="/categories/DEEP-LEARNING/">DEEP LEARNING</a></li><li><a class="category-link" href="/categories/Paper/">Paper</a></li><li><a class="category-link" href="/categories/练习题/">练习题</a></li><li><a class="category-link" href="/categories/随笔/">随笔</a>
 	                    </li></ul>
 	        </li>
 	        
@@ -127,12 +127,19 @@
 </nav>
 
         <div id="main">
-            <div class="post_page_title_img" style="height: 25rem;background-image: url();background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;">
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2></h2></a>
+            <div class="post_page_title_img" style="height: 25rem;background-image: url(https://chen950203.github.io/7.png);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;">
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2>Hybrid Neural Network based on Feature Fusion for Vehicle Type Identification</h2></a>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                
+                <hr>
+<p>(本文摘译<a href="https://www.deeplearning.ai/" target="_blank" rel="noopener">“吴恩达老师的深度学习课程”</a>)</p>
+<h2 id="Data-structure-of-Neural-Network"><a href="#Data-structure-of-Neural-Network" class="headerlink" title="Data structure of Neural Network"></a>Data structure of Neural Network</h2><p>当实现一个神经网络的时候，需要知道一些非常重要的技术和技巧。例如有一个包含$m$个样本的训练集，你很可能习惯于用一个<strong>for</strong>循环来遍历训练集中的每个样本，但是当实现一个神经网络的时候，我们通常不直接使用<strong>for</strong>循环来遍历整个训练集。</p>
+<p>另外在神经网络的计算中，通常先有一个叫做前向暂停(<strong>forward pause</strong>)或叫做前向传播(<strong>foward propagation</strong>)的步骤，接着有一个叫做反向暂停(<strong>backward pause</strong>) 或叫做反向传播<strong>(backward propagation</strong>)的步骤。</p>
+<p>使用逻辑回归(l<strong>ogistic regression</strong>)来传达这些想法，以使更加容易地理解这些概念。</p>
+<p>逻辑回归是一个用于二分类(<strong>binary classification</strong>)的算法。首先从一个问题开始说起，这里有一个二分类问题的例子，假如有一张图片作为输入，比如这只猫，如果识别这张图片为猫，则输出标签1作为结果；如果识别出不是猫，那么输出标签0作为结果。现在可以用字母 $y$来 表示输出的结果标签，如下图所示：</p>
+<p><img src="//chen950203.github.io/2020/09/14/Hybrid/8.jpg" alt></p>
+
             </div>
 
             <!-- Post Comments -->

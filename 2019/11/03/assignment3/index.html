@@ -157,7 +157,7 @@
 <p>Visualize the dataset using matplotlib. The data looks like a “flower” with some red (label y=0) and some blue (y=1) points. Your goal is to build a model to fit this data. </p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Visualize the data:</span></span><br><span class="line">plt.scatter(X[<span class="number">0</span>, :], X[<span class="number">1</span>, :], c=reduce(operator.add, Y), s=<span class="number">40</span>, cmap=plt.cm.Spectral);</span><br></pre></td></tr></table></figure>
 
-<center>![](./output_6_0.png)</center>
+<center>![](./assignment/output_6_0.png)</center>
 
 <p>You have:<br>    - a numpy-array (matrix) X that contains your features (x1, x2)<br>    - a numpy-array (vector) Y that contains your labels (red:0, blue:1).</p>
 <p>Lets first get a better sense of what our data is like. </p>
@@ -176,13 +176,13 @@ D:\anaconda23\lib\site-packages\sklearn\model_selection\_split.py:1978: FutureWa
   warnings.warn(CV_WARNING, FutureWarning)</code></pre><p>You can now plot the decision boundary of these models. Run the code below.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Plot the decision boundary for logistic regression</span></span><br><span class="line">plot_decision_boundary(<span class="keyword">lambda</span> x: clf.predict(x), X, Y)</span><br><span class="line">plt.title(<span class="string">"Logistic Regression"</span>)</span><br><span class="line"><span class="comment"># Print accuracy</span></span><br><span class="line">LR_predictions = clf.predict(X.T)</span><br><span class="line"><span class="keyword">print</span> (<span class="string">'Accuracy of logistic regression: %d '</span> % float((np.dot  </span><br><span class="line"></span><br><span class="line">/(Y,LR_predictions) + np.dot(<span class="number">1</span>-Y,<span class="number">1</span>-LR_predictions))/float(Y.size)*<span class="number">100</span>) +</span><br><span class="line">/<span class="string">'% '</span> + <span class="string">"(percentage of correctly labelled datapoints)"</span>)</span><br></pre></td></tr></table></figure>
 
-<pre><code>Accuracy of logistic regression: 47 % (percentage of correctly labelled datapoints)</code></pre><center>![](./output_13_1.png)</center>
+<pre><code>Accuracy of logistic regression: 47 % (percentage of correctly labelled datapoints)</code></pre><center>![](./assignment3/output_13_1.png)</center>
 
 
 <p><strong>Interpretation</strong>: The dataset is not linearly separable, so logistic regression doesn’t perform well. Hopefully a neural network will do better. Let’s try this now! </p>
 <h2 id="4-Neural-Network-model"><a href="#4-Neural-Network-model" class="headerlink" title="4 - Neural Network model"></a>4 - Neural Network model</h2><p>Logistic regression did not work well on the “flower dataset”. You are going to train a Neural Network with a single hidden layer.</p>
 <p><strong>Here is our model</strong>:</p>
-<center>![](.output_50_2.png)</center>
+<center>![](./assignment3/output_50_2.png)</center>
 **Mathematically**:
 
 <p>For one example $x^{(i)}$:<br>$$z^{[1] (i)} =  W^{[1]} x^{(i)} + b^{[1] (i)}\tag{1}$$<br>$$a^{[1] (i)} = \tanh(z^{[1] (i)})\tag{2}$$<br>$$z^{[2] (i)} = W^{[2]} a^{[1] (i)} + b^{[2] (i)}\tag{3}$$<br>$$\hat{y}^{(i)} = a^{[2] (i)} = \sigma(z^{ [2] (i)})\tag{4}$$<br>$$y^{(i)}_{prediction} = \begin{cases} 1 &amp; \mbox{if } a^{<a href="i">2</a>} &gt; 0.5 \ 0 &amp; \mbox{otherwise } \end{cases}\tag{5}$$</p>
@@ -257,7 +257,7 @@ b2 = [[0.]]</code></pre><h3 id="4-3-The-Loop"><a href="#4-3-The-Loop" class="hea
 <pre><code>cost = 0.6929198937761265</code></pre><p>Using the cache computed during forward propagation, you can now implement backward propagation.</p>
 <p><strong>Question</strong>: Implement the function <code>backward_propagation()</code>.</p>
 <p><strong>Instructions</strong>:<br>Backpropagation is usually the hardest (most mathematical) part in deep learning. To help you, here again is the slide from the lecture on backpropagation. You’ll want to use the six equations on the right of this slide, since you are building a vectorized implementation.  </p>
-<center>![](./grad_summary.png)</center>
+<center>![](./assignment3/grad_summary.png)</center>
 
 <!--
 $\frac{\partial \mathcal{J} }{ \partial z_{2}^{(i)} } = \frac{1}{m} (a^{[2](i)} - y^{(i)})$
@@ -304,8 +304,8 @@ db2 = [[0.06589489]]</code></pre><p><strong>Question</strong>: Implement the upd
 <p><strong>General gradient descent rule</strong>: $ \theta = \theta - \alpha \frac{\partial J }{ \partial \theta }$ where $\alpha$ is the learning rate and $\theta$ represents a parameter.</p>
 <p><strong>Illustration</strong>: The gradient descent algorithm with a good learning rate (converging) and a bad learning rate (diverging). Images courtesy of Adam Harley.</p>
 <center>
-![](./sgd.gif)
-![](./sgd_bad.gif)</center>
+![](./assignment3/sgd.gif)
+![](./assignment3/sgd_bad.gif)</center>
 
 
 
@@ -368,7 +368,7 @@ Cost after iteration 9000: 0.218553
 
 
 Text(0.5, 1.0, &apos;Decision Boundary for hidden layer size 4&apos;)</code></pre><center>
-![](./classification_kiank.png)</center>
+![](./assignment3/classification_kiank.png)</center>
 
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Print accuracy</span></span><br><span class="line">predictions = predict(parameters, X)</span><br><span class="line"><span class="keyword">print</span> (<span class="string">'Accuracy: %d'</span> % float((np.dot(Y,predictions.T) + </span><br><span class="line">/np.dot(<span class="number">1</span>-Y,<span class="number">1</span>-predictions.T))/float(Y.size)*<span class="number">100</span>) + <span class="string">'%'</span>)</span><br></pre></td></tr></table></figure>
@@ -384,10 +384,7 @@ Accuracy for 3 hidden units: 90.75 %
 Accuracy for 4 hidden units: 90.5 %
 Accuracy for 5 hidden units: 91.25 %
 Accuracy for 10 hidden units: 90.25 %
-Accuracy for 20 hidden units: 90.5 %</code></pre><center>
-![](./output_56_1.png)</center>
-
-
+Accuracy for 20 hidden units: 90.5 %</code></pre><p><img src="//chen950203.github.io/2019/11/03/assignment3/output_56_1.png" alt></p>
 <p><strong>Interpretation</strong>:</p>
 <ul>
 <li>The larger models (with more hidden units) are able to fit the training set better, until eventually the largest models overfit the data. </li>
@@ -481,8 +478,8 @@ $('.btn_click_load').click(function() {
 -->
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'http://chen950203.github.io/2019/11/03/assignment3/assignment3/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://chen950203.github.io/2019/11/03/assignment3/assignment3/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://chen950203.github.io/2019/11/03/assignment3/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://chen950203.github.io/2019/11/03/assignment3/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 

@@ -159,20 +159,25 @@ $H_{m}(k)=\begin{cases}
 \qquad \qquad 0 \qquad  \qquad \qquad \quad , \quad k> f(m+1) 
 \end{cases}\qquad (3) $
 </center><br>
-Where, $\sum_{k=0}^{n}H_{m}(k)=1$, $f(m)$ is the center frequency of the triangular filter. Then the logarithmic transformation of the mth filter bank can be expressed as:
+Where, $\sum_{k=0}^{n}H_{m}(k)=1$, $f(m)$ is the center frequency of the triangular filter. Then the logarithmic transformation of the $m$th filter bank can be expressed as:
 <center>$s(m)=ln\left(\sum_{k=0}^{M-1}|s(k)|^{2}H_{m}(k)\right),0\le m\le M, \qquad (4) $</center><br>
 Finally, we perform a discrete Fourier transform on a to obtain the Mel frequency cepstrum coefficient:<br>
 <center>$C(n)=\sum_{n=0}^{M-1}s(m)cos(\pi n(m+0.5)/M),\qquad (5)$</center>
 Where, $M$ is the dimension of the MFCC feature.<br>
-B. Pitch Class Profile (PCP)
-The pitch class profile can be used to extract the characteristics of the audio tone. It reconstructs the spectrum into sound spectrum, which describing the level of sound 16. When extracting the MFCC, we send the audio signals to Mel filter to smooth spectrum and eliminate harmonics. The formant of audio will be highlighted. So the tone characteristics of vehicle audio will be ignored. But the vehicle audio contains complex audio signals including horn sound, tire friction sound and engine sound, etc. So the pitch class profile can be selected to be the characteristic to recognize different types of the vehicles. The process of extracting PCP is shown in Fig. 2.<br>
 
-
+<p>B. Pitch Class Profile (PCP)<br>The pitch class profile can be used to extract the characteristics of the audio tone. It reconstructs the spectrum into sound spectrum, which describing the level of sound 16. When extracting the MFCC, we send the audio signals to Mel filter to smooth spectrum and eliminate harmonics. The formant of audio will be highlighted. So the tone characteristics of vehicle audio will be ignored. But the vehicle audio contains complex audio signals including horn sound, tire friction sound and engine sound, etc. So the pitch class profile can be selected to be the characteristic to recognize different types of the vehicles. The process of extracting PCP is shown in Fig. 2.<br></p>
 <p><img src="//chen950203.github.io/2020/09/14/Hybrid/1.jpg"></p>
-<center><font color="black" size="2">Figure 2: The process of extracting PCP</font></center>The specific extraction steps are as follows:<br>
-Step 1:  $x(m)$ is the collected audio signal, we segment the pre-processed audio into frames, $N$ is frame length; $N/2$ is frame shifting; we use Hamming window as window function.
+<center><font color="black" size="2">Figure 2: The process of extracting PCP</font></center>
+The specific extraction steps are as follows:<br>
+$Step 1:$  $x(m)$ is the collected audio signal, we segment the pre-processed audio into frames, $N$ is frame length; $N/2$ is frame shifting; we use Hamming window as window function.
 <center>$X^{cqt}(k)=\frac{1}{N}\sum_{m=0}^{N_k-1}x(m)w_{N_k}(m)e^-j\frac{2\pi Q}{N_k}m,\qquad (6)$</center>
-
+The formula represents the spectrum of the $k$th semitone of the nth frame.  $w_{N_k}(m)$  is the window and  $N_{k}$ is the length of the window. $Q$ is the constant factor of Constant-Q spectral analysis.<br>
+$Step 2:$ A 12-bin tuned Chromagram is then calculated from the Constant-Q spectra. The CQT spectrum is mapped to a pitch contour feature in a logarithmic manner according to the averaging law in music theory. The mapping formula is:<br>
+<center>$p(k)=[12\times ln(k\cdot f_{s}/N\cdot f_{ref})]mod12 \qquad  (7)$</center>
+In the formula, $f_s$ is sampling rate; $f_{s}/N$ is the frequency domain interval; $f_{ref}$ is the reference frequency, corresponding to the $C1$ in music; indicates the frequency of each frequency domain.
+$Step 3:$ Accumulate all the frequency which corresponding to the pitch class, we will obtain the 12-bin PCP vector:
+<center>$PCP(p)=\sum_{k:p(k)=p}|X^{cqt}(k)|,p=1,2...12, \qquad  (8)$</center>
+$Step 4:$ In order to make the $PCP$ more dynamic, we perform a first-order difference on the $PCP(p)$ to get $PCP'(p)$ and then stitch $PCP(p)$ and $PCP'(p)$.
             </div>
 
             <!-- Post Comments -->

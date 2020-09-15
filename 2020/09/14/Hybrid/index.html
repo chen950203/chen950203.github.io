@@ -145,7 +145,12 @@ After the pre-processing of vehicle audio signals, $MFCC$ vector will be extract
 
 <center>$s(k)=\sum_{k=1}^{n}x(m)e^{(-j2/pik/N)},0\leq k\leq N\qquad (2)$
 
-<p><img src="//chen950203.github.io/2020/09/14/Hybrid/MFCC.jpg"></p></center><br><strong><center><font color="black" size="2">Figure 1: The process of extracting MFCC</font></center></strong>$x(m)$ is the input audio signal, $N$ is the number of Fourier transform.<br>Then we use $M$ Mel filter banks to filter the audio signal. The transfer function of the mth filter bank can be expressed as follows:<br><p></p>
+
+<p><img src="//chen950203.github.io/2020/09/14/Hybrid/MFCC.jpg"></p></center><p></p>
+<center><font color="black" size="2">Figure 1: The process of extracting MFCC</font></center>$x(m)$ is the input audio signal, $N$ is the number of Fourier transform.
+Then we use $M$ Mel filter banks to filter the audio signal. The transfer function of the mth filter bank can be expressed as follows:<br>
+
+
 <center>
 $H_{m}(k)=\begin{cases} 
 \qquad \qquad  0 \qquad \qquad \qquad \quad , \quad k< f(m-1) \\\\
@@ -157,8 +162,16 @@ $H_{m}(k)=\begin{cases}
 Where, $\sum_{k=0}^{n}H_{m}(k)=1$, $f(m)$ is the center frequency of the triangular filter. Then the logarithmic transformation of the mth filter bank can be expressed as:
 <center>$s(m)=ln\left(\sum_{k=0}^{M-1}|s(k)|^{2}H_{m}(k)\right),0\le m\le M, \qquad (4) $</center><br>
 Finally, we perform a discrete Fourier transform on a to obtain the Mel frequency cepstrum coefficient:<br>
-<center>$C(n)=\sum_{n=0}^{M-1}s(m)cos(\pi n(m+0.5)/M),\qquad (5)$</center><br>
+<center>$C(n)=\sum_{n=0}^{M-1}s(m)cos(\pi n(m+0.5)/M),\qquad (5)$</center>
+Where, $M$ is the dimension of the MFCC feature.
+B. Pitch Class Profile (PCP)
+The pitch class profile can be used to extract the characteristics of the audio tone. It reconstructs the spectrum into sound spectrum, which describing the level of sound 16. When extracting the MFCC, we send the audio signals to Mel filter to smooth spectrum and eliminate harmonics. The formant of audio will be highlighted. So the tone characteristics of vehicle audio will be ignored. But the vehicle audio contains complex audio signals including horn sound, tire friction sound and engine sound, etc. So the pitch class profile can be selected to be the characteristic to recognize different types of the vehicles. The process of extracting PCP is shown in Fig. 2.<br>
 
+
+<p><img src="//chen950203.github.io/2020/09/14/Hybrid/1.jpg"></p>
+<center><font color="black" size="2">Figure 2: The process of extracting PCP</font></center>The specific extraction steps are as follows:<br>
+Step 1:  $x(m)$ is the collected audio signal, we segment the pre-processed audio into frames, $N$ is frame length; $N/2$ is frame shifting; we use Hamming window as window function.
+<center>$X^{cqt}(k)=\frac{1}{N}\sum_{m=0}^{N_k-1}x(m)w_{N_k}(m)e^-j\frac{2\pi Q}{N_k}m,\qquad (6)$</center>
             </div>
 
             <!-- Post Comments -->

@@ -142,9 +142,13 @@
 Where, $f$ is the frequency.
 After the pre-processing of vehicle audio signals, $MFCC$ vector will be extracted from each frame in the form of vector group. Fast Fourier transform (FFT) is applied to each frame of the audio signals before sending to Mel filter where the original spectrum is transformed into Mel frequency spectrum. Then logarithmic transformation and discrete cosine transform are applied to the spectrum to form MFCC vectors. Equation (2) to (5) reflect the entire transformation process. Fig.1. shows the process of extracting MFCC.<br>
 
-<center>$s(k)=\sum_{k=1}^{n}x(m)e^{(-j2/pik/N)},0\leq k\leq N\qquad (2)$<br><br> 
+<center>$s(k)=\sum_{k=1}^{n}x(m)e^{(-j2/pik/N)},0\leq k\leq N\qquad (2)$<br><br> </center>
 
-<p><img src="//chen950203.github.io/2020/09/14/Hybrid/MFCC.jpg" alt> </p></center><br><strong><center><font color="black" size="2">Figure 1: The process of extracting MFCC</font></center></strong>$x(m)$ is the input audio signal, $N$ is the number of Fourier transform.<br>Then we use $M$ Mel filter banks to filter the audio signal. The transfer function of the mth filter bank can be expressed as follows:<br><p></p>
+<center>![](./Hybrid/MFCC.jpg) </center>
+**<center><font color="black" size="2">Figure 1: The process of extracting MFCC</font></center>**$x(m)$ is the input audio signal, $N$ is the number of Fourier transform.
+Then we use $M$ Mel filter banks to filter the audio signal. The transfer function of the mth filter bank can be expressed as follows:<br>
+
+
 <center>
 $H_{m}(k)=\begin{cases} 
 \qquad \qquad  0 \qquad \qquad \qquad \quad , \quad k< f(m-1) \\\\

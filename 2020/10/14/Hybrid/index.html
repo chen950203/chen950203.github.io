@@ -24,7 +24,7 @@
           content: ' ';
           position: fixed;
           top: 0;
-          background: url('/img/bg.jpg') center 0 no-repeat;
+          background: url('/img/bg2.jpg') center 0 no-repeat;
           right: 0;
           bottom: 0;
           left: 0;
@@ -145,7 +145,7 @@ After the pre-processing of vehicle audio signals, $MFCC$ vector will be extract
 
 <center>$s(k)=\sum_{k=1}^{n}x(m)e^{(-j2/pik/N)},0\leq k\leq N\qquad (2)$</center>
 
-<p><img src="//chen950203.github.io/2020/09/14/Hybrid/MFCC.jpg"></p>
+<p><img src="//chen950203.github.io/2020/10/14/Hybrid/MFCC.jpg"></p>
 <p><font color="black" size="2">Figure 1: The process of extracting MFCC</font></p>
 <p>$x(m)$ is the input audio signal, $N$ is the number of Fourier transform.<br>Then we use $M$ Mel filter banks to filter the audio signal. The transfer function of the mth filter bank can be expressed as follows:<br></p>
 <center>
@@ -163,7 +163,7 @@ Finally, we perform a discrete Fourier transform on a to obtain the Mel frequenc
 Where, $M$ is the dimension of the MFCC feature.<br>
 
 <p>B. Pitch Class Profile (PCP)<br><br>The pitch class profile can be used to extract the characteristics of the audio tone. It reconstructs the spectrum into sound spectrum, which describing the level of sound 16. When extracting the MFCC, we send the audio signals to Mel filter to smooth spectrum and eliminate harmonics. The formant of audio will be highlighted. So the tone characteristics of vehicle audio will be ignored. But the vehicle audio contains complex audio signals including horn sound, tire friction sound and engine sound, etc. So the pitch class profile can be selected to be the characteristic to recognize different types of the vehicles. The process of extracting PCP is shown in Fig. 2.<br></p>
-<p><img src="//chen950203.github.io/2020/09/14/Hybrid/1.jpg"><br><font color="black" size="2">Figure 2: The process of extracting PCP</font><br>The specific extraction steps are as follows:<br><br>$Step 1:$  $x(m)$ is the collected audio signal, we segment the pre-processed audio into frames, $N$ is frame length; $N/2$ is frame shifting; we use Hamming window as window function.</p>
+<p><img src="//chen950203.github.io/2020/10/14/Hybrid/1.jpg"><br><font color="black" size="2">Figure 2: The process of extracting PCP</font><br>The specific extraction steps are as follows:<br><br>$Step 1:$  $x(m)$ is the collected audio signal, we segment the pre-processed audio into frames, $N$ is frame length; $N/2$ is frame shifting; we use Hamming window as window function.</p>
 <center>$X^{cqt}(k)=\frac{1}{N}\sum_{m=0}^{N_k-1}x(m)w_{N_k}(m)e^-j\frac{2\pi Q}{N_k}m,\qquad (6)$</center>
 The formula represents the spectrum of the $k$th semitone of the nth frame.  $w_{N_k}(m)$  is the window and  $N_{k}$ is the length of the window. $Q$ is the constant factor of Constant-Q spectral analysis.<br>
 $Step 2:$ A 12-bin tuned Chromagram is then calculated from the Constant-Q spectra. The CQT spectrum is mapped to a pitch contour feature in a logarithmic manner according to the averaging law in music theory. The mapping formula is:<br>
@@ -172,6 +172,10 @@ In the formula, $f_s$ is sampling rate; $f_{s}/N$ is the frequency domain interv
 $Step 3:$ Accumulate all the frequency which corresponding to the pitch class, we will obtain the 12-bin PCP vector:
 <center>$PCP(p)=\sum_{k:p(k)=p}|X^{cqt}(k)|,p=1,2...12, \qquad  (8)$</center>
 $Step 4:$ In order to make the $PCP$ more dynamic, we perform a first-order difference on the $PCP(p)$ to get $PCP'(p)$ and then stitch $PCP(p)$ and $PCP'(p)$.
+
+
+<p>更新至2020.10.14</p>
+
             </div>
 
             <!-- Post Comments -->
@@ -233,8 +237,8 @@ $('.btn_click_load').click(function() {
 -->
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'http://chen950203.github.io/2020/09/14/Hybrid/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://chen950203.github.io/2020/09/14/Hybrid/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://chen950203.github.io/2020/10/14/Hybrid/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://chen950203.github.io/2020/10/14/Hybrid/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 

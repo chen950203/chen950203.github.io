@@ -24,7 +24,7 @@
           content: ' ';
           position: fixed;
           top: 0;
-          background: url('/img/bg1.jpg') center 0 no-repeat;
+          background: url('/img/bg.jpg') center 0 no-repeat;
           right: 0;
           bottom: 0;
           left: 0;
@@ -81,7 +81,7 @@
         <!-- Intro 头部显示 e -->
         <!-- Header 头部logo start -->
         <header id="header">
-    <a href="/" class="logo">HAOZE</a>
+    <a href="/" class="logo">Nemo</a>
 </header>
         <!-- Nav 导航条 start -->
         <nav id="nav" class="special">
@@ -173,8 +173,16 @@ $Step 3:$ Accumulate all the frequency which corresponding to the pitch class, w
 <center>$PCP(p)=\sum_{k:p(k)=p}|X^{cqt}(k)|,p=1,2...12, \qquad  (8)$</center>
 $Step 4:$ In order to make the $PCP$ more dynamic, we perform a first-order difference on the $PCP(p)$ to get $PCP'(p)$ and then stitch $PCP(p)$ and $PCP'(p)$.
 
+<p>C. Short-term Energy<br><br>The energy can reflect vehicle audio feature more comprehensively.  $x_{n}(m)$ is the $n$th frame of pre-processed audio signal. $E_{n}$ is the short-term energy:</p>
+<center>$E_{n}=\sum^{L}_{m=1}[x_{n}(m)]^{2}$</center>
+In the formula, $L$ is the length of the frame.
+We extract 40 dimensional MFCC vector $T_{1}=[a_{1},a_{2},...,a_{40}]$, 24 dimensional PCP vector $T_{2}=[b_{1},b_{2},...,b_{24}]$, and 1 dimensional short-term energy vector $T_{3}=[c_{1}]$, and stitch from beginning to end, obtaining 65 dimensional new feature $T_{1}=[a_{1},...,a_{40},b_{1},b_{2},...,b_{24},c_{1}]$.
 
-<p>更新至2020.10.14</p>
+<p><strong>II.Hybrid neural network</strong><br>A Convolutional Neural Network (CNN)<br>Essentially, CNN is an extended structure of multi-layer perceptron, the construction of the network layer structure has a great impact on the actual output. The classic convolutional neural networks include input layer, convolutional and pooling layer combined in various forms, a limited number of fully connected layer, and output layer. In the convolutional layer, the convolution kernel performs a convolution operation on the vector which export from the previous layer. Nonlinear system can be obtained by activation function, mathematical model can be expressed as:</p>
+<center>$x^{l}_{j}=f(\sum_{i \in M_{j}}x^{i}_{j} \times k^{l}_{ij}+b^{l}_{j})$</center>
+In the formula, $M_{j}$ is input vector; $l$ is the layer $l$ network; $k$ is the convolution kernel; $b$ is bias; $x^{i}_{j}$ is the output of layer $l$. We select $ReLU$ as the activation function.
+
+<p>更新至2022.06.22</p>
 
             </div>
 

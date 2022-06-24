@@ -1,0 +1,297 @@
+<!DOCTYPE HTML>
+<html>
+
+<head><meta name="generator" content="Hexo 3.9.0">
+	<link rel="bookmark" type="image/x-icon" href="/img/logo_miccall.png">
+	<link rel="shortcut icon" href="/img/logo_miccall.png">
+	
+			    <title>
+    chenhaoze.com
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="/css/mic_main.css">
+    <link rel="stylesheet" href="/css/dropdownMenu.css">
+    <meta name="keywords" content="chenhaoze">
+    
+    	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	 
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css">
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/wallpaper3.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script async type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css">
+<link rel="stylesheet" href="/css/typo.css">
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">个人主页</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special">
+            <ul class="menu links">
+			<!-- Homepage  主页  --> 
+			<li>
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/DEEP-LEARNING/">DEEP LEARNING</a></li><li><a class="category-link" href="/categories/练习题/">练习题</a></li><li><a class="category-link" href="/categories/论文/">论文</a></li><li><a class="category-link" href="/categories/随笔/">随笔</a>
+	                    </li></ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="关于我">
+		                关于我
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/gallery/" title="图集">
+		                图集
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+			</ul>
+</nav>
+
+        <div id="main">
+            <div class="post_page_title_img" style="height: 25rem;background-image: url(https://chen950203.github.io/8.png);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;">
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2>Depth Classification of Defects</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <p><script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script><br><strong>ABSTRACT :</strong> As an important part of non-destructive testing, infrared thermography testing is widely used in various fields of industrial development for monitoring the quality of metal parts. Considering the problem of low detection rate of surface defects on steel parts, we explored the application of neural architecture search (NAS) in infrared thermography area for the first time. On the one hand, we compared different time-series temperature features of defect locations in infrared images and validate the performance of three different features such as heating, cooling and full process by machine learning methods. On the other hand, we searched for multilayer perceptron through NAS technology to classify defects with different depths. Experiments have proved that the time-series temperature feature is very effective when used in the depth classification of defects, and the accuracy rate can reach 93% under the verification of traditional machine learning methods. The NAS technique used in this paper can search 100 multilayer perceptrons in a minimum of 121s and achieve 100% defect classification accuracy.</p>
+<p><strong>I.INTRODUCTION</strong><br>Due to the corrosion resistance and high temperature resistance of steel material, it has been maturely used in the industrial production life of aircraft, railway tracks and ships. However, There may be many problems in the process of steel plate processing, casting and rolling. These problems will lead to many types of defects on steel plate surface [1], the emergence of this phenomenon can cause a great threat to industrial production and personal safety. With the increase in demand for various steel industrial equipment, the resulting safety problems are becoming more and more prominent. Defect detection can be the following: magnetic particle detection [2], penetration detection [3], eddy current detection [4], x-ray [5] and infrared thermography (IRT) [6]. However, in addition to infrared thermal imaging technology, other methods are also affected by many factors. For example, magnetic particle testing can only detect defects on the surface and near-surface of ferromagnetic materials, and the detectable depth is usually only 1-2 mm; eddy current testing is affected by the effect of the lift-off height makes it impossible to detect defects such as uneven surface. These lead to inaccurate defect depth detection and low efficiency. Temperature can be used as an indicator of the health of parts and equipment [7]. When cracks appear on the surface of the equipment, it can cause an abnormal temperature distribution. IRT [8] is the science of acquiring and analyzing infrared images by means of non-contact thermal imaging devices. IRT detects cracks by analyzing the temperature field distribution on the surface of an object. It has the advantages of high detection accuracy, rich and complete detection information. Pech-May et al. used a lock-in thermography setup with focused laser excitation to characterize the width of infinite vertical cracks accurately [9]. Chen et al. can accurately detect defects in carbon fiber reinforced polymers from IRT images [10]. Ahmad et al. proposed an independent component analysis (ICA) to process FMTWI image sequence which can identify, locate and extract the shape of defects [11]. Numan et al. used an artificial neural network (NN) coupled with a Pulsed Thermography PT setup to detect the depth of defects in composite samples [12]. Wang et al. used two different heating methods of modulated lasers to heat aerospace carbon fiber composite materials with internal defects. The result shows that after expansion, the unevenness of laser energy distribution has a great influence on the detection effect [13]. Jiang et al. explored the possibility of combining laser ultrasound technology with hybrid intelligence methods for rapid defect classification and evaluation at different depths [14]. In recent years, more and more researchers have trained the collected images through machine learning methods to achieve the effect of classification or defect location [15-19]. Ali et al. proposed a hybrid feature-based support vector machine (SVM) model for hotspot detection and classification of PV panels using infrared thermography. The proposed method is easily implemented to effectively monitor PV panels and perform fault diagnosis [15]. Wang et al. used a laser infrared thermography system to inspect aerospace CFRP sheets and a long-term short-term memory recurrent neural network to determine the defect depth [16]. Yang et al. used improved Faster Region-based Convolutional Neural Network (Faster R-CNN) for the detection of surface cracks in steel [17]. Pahlberg et al. investigated the possibility of automatically detecting cracks using an ensemble approach random forest and enhanced by ultrasound-excited thermography and various predictor variables [18]. Luo et al. proposed a hybrid spatial and temporal deep learning architecture for automatic detection of thermal imaging defects. This method has the ability to significantly reduce the inhomogeneous illumination and improve the detection rate [19]. The machine learning methods above can characterize the depth information of defects. But the accuracy and efficiency of these methods are not satisfactory. In [12], [15], [18], the process of extracting features is too complex and takes a long time for experienced researchers in this field; in [16] and [19], researchers need to set parameters manually, such as the time step of the LSTM and the neural network model is too complex, which takes a long training time. Although Faster R-CNN was used in [17], it still take a considerable amount of training time and the accuracy of defect recognition can only reach around 95%.<br>The design of neural network architectures is a time-consuming and tedious task. A high-performance network structure requires an experienced adjustment parameter engineer to design. Usually, the stricter the hyperparameter requirements, the better the performance of the neural network. To address the above bottlenecks in these literatures, Google proposed neural architecture search (NAS) with reinforcement learning [20] which can design the neural architecture automatically. NAS has achieved exciting results in the fields of image recognition [21-23] and neural machine translation (NMT) [24]. Search space, search method and performance evaluation strategy are the three elements of NAS [25]. As far as we know, infrared thermography testing with NAS not been studied by scholars.<br>We propose a neural architecture search method based on reinforcement learning for the deep classification of infrared thermal imaging defects. On the one hand, this method can greatly reduce the design time of neural networks; on the other hand, it can improve the efficiency and accuracy of deep classification of defects without manually extracting complex features. A recurrent neural network (RNN) can generate a variable-length string to specify a neural network. We adapted the NASCell proposed in [20] as the controller RNN unit to generate a string describing the structure of the multilayer perceptron. The RNN is then trained by reinforcement learning to search for the optimal multilayer perceptron in the search space. When training detection data, an accuracy d is obtained, and we update the controller RNN by a policy gradient so that the highest accuracy d as the reward corresponds to the multilayer perceptron structure as the highest scoring structure.</p>
+<p><strong>2. WORKFLOWS</strong></p>
+<p>Modern classification of defects with IRT includes three steps: defect data acquisition, defect features extraction, and classification. Fig. 1 shows the process of modern classification. In the first step, we use a pulsed laser to heat the area around the defect and collect the temperature change at the defect by infrared thermography. In the second step, the temperature change of the point of interest (POI) at the defect is used as a feature vector to study its heating and cooling processes. In the third step, we design different multilayer perceptron (MLP) architectures to train the feature data by NAS to identify the defects at different depths. Here, we compare other machine learning classification methods with NAS, such as Extra-trees classifier (ET) [26], Decision Trees (DT) [27], Random Forest (RF) [28] and KNN [29]. Fig. 2 shows the flowchart of our work.</p>
+<p><img src="//chen950203.github.io/2022/06/25/NAS_access/1.png" alt><br>(a)</p>
+<p><img src="//chen950203.github.io/2022/06/25/NAS_access/1b.png" alt><br></p>
+<p><div align="center">(b)<br></div></p>
+<p><img src="//chen950203.github.io/2022/06/25/NAS_access/1c.png" alt><br></p>
+<p><div align="center">(c)</div></p>
+<p><img src="//chen950203.github.io/2022/06/25/NAS_access/1d.png" alt><br></p>
+<p><div align="center">(d)<br></div></p>
+<p>Fig. 1. dMRI signals of five voxels using different acquisition strategies: a) DDE; b) DODE; c) PGSE-DSI; d) PGSE-MS.<br></p>
+<p><strong>2.2 Neural Architecture Search (NAS)</strong><br>Deep learning is becoming more and more popular on solving practical problems in different fields. The key step is to model data by designing different types of neural networks such as multilayer perceptron, convolutional neural networks, and recurrent neural networks to achieve classification and regression goals. However, its success is accompanied by the growing demand for network structure design, where manual tuning of complex neural network structures not only is time consuming and expert knowledge demanding, but also may be sub-optimal. Therefore, neural architecture search (NAS) is proposed to automatically design neural network structures with the hope of automating machine learning in the future (Zoph &amp; Le, 2016) for high predictive performance of deep learning models on unseen data.<br>As proposed by (Zoph &amp; Le, 2016), a variable-length string can be generated using a recurrent neural network (RNN) to specify a neural network. We used RNN as a controller to generate a descriptive string of the structure of a multilayer perceptron, and then trained RNN through reinforcement learning to find the optimal multilayer perceptron structure in a given search space. Training the multilayer perceptron network specified by the string on the training dMRI data will result in a mean squared error (MSE) on a validation dMRI set. Using this MSE as the reward signal, we can update the controller by computing the policy gradient.  In other words, the controller will give a higher score to the neural network structure with a lower MSE.<br>2.2.1 Search Space<br>Since the sample data is relatively small, instead of searching in complex network structures, we chose the multilayer perceptron as the child model to search the number of neurons in the multiple fully connected layers using the controller RNN. As shown in Fig. 2, we set 5 different numbers of neurons to choose: 8, 16, 32, 64 and 128. Our goal is to select the neural network model with the highest reward in the search space to achieve the best prediction accuracy, i.e. the least MSE.<br><img src="//chen950203.github.io/2022/06/25/NAS_access/2.png" alt><br></p>
+<p>Fig. 2. The number of neurons (m) in each layer of the multilayer perceptron are the search space in the proposed NAS. m belongs to [8, 16, 32, 64, 128] in this work.<br><br>2.2.2 The RNN controller<br>Recurrent neural networks (RNNs) are neural network structures used to process time series with certain memories to remove the content of uninterest and to retain that of interest. RNN contains the input, hidden, and output units, where the output is controlled by the activation function. Long Short-Term Memory (LSTM) is a specific RNN that is designed to address the gradient disappearance during long sequence training and the gradient explosion problem for training of longer sequences. The basic structure of the LSTM unit is shown Fig.3 (Chen et al., 2020).<br>The forget gate can be express as:</p>
+<center>$f_t=\sigma(W_f[x_t,h_t, C_{t-1}]+b_t)*C_{t-1}\qquad (1)$</center>
+Where, $x_{t}$ is input unit; $h_{t-1}$ is the output unit; $C_{t-1}$ is the status of previous unit; $W_f$ is weight; bt is the bias; σ is the sigmoid. Input gate and output gate can be expressed by formula (2)-(5):
+<center>$i_t=\sigma(W_i[x_t,h_{t-1}, C_{t-1}]+b_i)\qquad (2)$</center>
+
+<center>$C_t=f_t+i_t*tanh(W_i[x_t,h_{t-1}, C_{t-1}]+b_i)\qquad (3)$</center>
+
+<center>$o_t=\sigma(W_o[x_t,h_{t-1}, C_t]+b_o)\qquad (4)$</center>
+
+<center>$h_t=tanh(C_t)*o_t\qquad (5)$</center>
+where $C_t$ is the output status of the input gate and $h_t$ is the output of the LSTM unit.
+![](./dmri/3.png)<br>
+
+Fig. 3. Structure of the LSTM unit. (Reprinted from (22))
+We adapted the NASCell unit proposed in (Zoph & Le, 2016) as shown in Fig. 4, which is similar to the aforementioned LSTM unit. The internal calculation steps of NASCell can be expressed as follows:
+<center>$a_0=tanh(W_1*x_1+W_2*h_{t-1})\qquad (6)$</center>
+<center>$a_1=ReLU((W_3*x_t) \cdot (W_4*h_{t-1}))\qquad (7)$</center>
+<center>$a_0=tanh(W_1*x_1+W_2*h_{t-1})\qquad (8)$</center>
+<center>$a_0^{new}=ReLU(a_0+c_{t-1})\qquad (9)$</center>
+<center>$h_t=sigmoid(a_0^{new} \cdot a_1)\qquad (10)$</center>
+<center>$c_t=(W_3*x_t) \cdot (W_4*h_{t-1})\qquad (11)$</center>
+where $W_1$ represents the connection weight matrix from the input layer to node $a_0$, $W_2$ represents the connection weight matrix from the hidden layer to node $a_0$. $W_3$ represents the connection weight matrix from the input layer to node $a_1$, and $W_4$ represents the connection weight matrix from the hidden layer to node $a_1$.
+![](./dmri/4.png)<br>
+
+Fig. 4. The structure of NASCell for the RNN controller.
+2.2.3 Training with reinforcement learning
+Reinforcement learning, supervised learning and unsupervised learning are the three branches of machine learning. Reinforcement learning is different from the other two branches by using the reward to guide the agent (the controller RNN in this work) for the maximum cumulative reward. Given   as the parameters of controller RNN and $\theta_c$  as the multilayer perceptron architecture predicted by the controller RNN, the optimal multilayer perceptron model can be obtained by maximizing the expected reward,
+<center>$J(\theta_c)=E_{P(\alpha_{1:M;\theta_c})}[R]\qquad (12)$</center>
+
+<p>where $P(a_{1:M;\theta_c})$ is the probability when sampling from   and R is the reward, i.e. the MSE of the validation set as the indicator of accuracy. By evaluating the loss function (MSE) generated by each iteration of the training, reinforcement learning searchs for the minimum MSE value in the predefined search space. Since R is not differentiable, we use the empirical strategy gradient algorithm to update J (Williams, 1992):</p>
+<p><center>$\frac{1}{2}\sum_{k=1}^{n}\sum_{k=1}^{n}\nabla    \theta_clogP(\alpha_1\mid\alpha_{(m-1):1};\theta_c)R_k\qquad (13)$</center><br>where n is the number of different multilayer perceptron architectures sampled by the controller RNN in each batch, M is the number of neurons to be predicted in each fully connected neural network layer set by the controller and $R_k$  is the reward of k-th predicted architecture. To suppress the high fluctuation of the estimate, we adapted the baseline function as in (Zoph &amp; Le, 2016) to replace $R_k$ in Eq. 12 with “$R_k-B$”, where B is defined as an exponential moving average of the previous architecture accuracies.<br>The automatic construction of the optimal multilayer perceptron architecture in the search space can be achieved by the NAS training as shown in the flower chart of Fig. 5.<br><img src="//chen950203.github.io/2022/06/25/NAS_access/5.png" alt><br></p>
+<p>Fig. 5. Training of Neural Architecture Search. The RNN controller predicts the optimal multilayer perceptron structure in the predefined search space based on the reward.<br><strong>3. Results</strong><br><strong>3.1 10-fold cross-validation</strong><br>In this experiment, the dMRI data obtained by four different collection strategies are divided into training set and validation data. Here, due to the small amount of experimental data and in order to avoid over-learning and under-learning, we used 10-fold cross-validation (CV) of the sample data to evaluate all methods, which selected 90% data for training and 10% for validation and repeated 10 times for 10 non-overlap validation data sets. The MSE averaged over 10 trials was used as the quantitative metric, unless otherwise stated.<br><strong>3.2 Feature selection for conventional machine learning methods</strong><br>In machine learning, the dimensionality of input features affects the accuracy of the prediction models. Here, we compare full features, manually selected features, and principal components (PCs) from principal component analysis (PCA). The manually selected features were obtained by removing the constant input parameters in each dMRI strategy as shown in Table 1. As can be seen in Fig. 6, the first PC accounts more than 99.9% of the total variance for PGSE-DSI and PGSE-MS, and the first six PCs account more than 99.9% of the total variance for DDE and DODE.<br>In order to evaluate which feature set can achieve the better prediction performance, we chose support vector machine regression (SVR) (Chang, 2011), decision tree (DT) (Breiman et al., 1983), random forest (RF) (Breiman, 2001), k-nearest neighbors (KNN) (Altman, 1992), adaboost regressor (AR) (Drucker, 1997), gradient boosting regressor (GBR) (Friedman, 2001) and extra-trees regressor (ET) (Geurts et al., 2006) as the regression model. Since the aim of the experiment was only to compare the advantages and disadvantages between different features, the default parameters were used for these regressors. These parameters can be found in a supplementary appendix online.<br>Fig. 7 show the MSE values for different methods using full features, PCs and manually selected features, respectively. In these figures, a smaller MSE value denotes a more accurate prediction performance. Since SVR seemed to have almost one-order of magnitude larger MSE than the other methods, we plotted it in a different color and used a larger scale for the vertical axis. We can also see from Fig. 7 that no matter which collection strategy was adopted, use of full features is more effective than PCA and manually selected features regardless of the regression model used. PCA did not help prediction performance, except for SVR of DODE. Full features lead to better MSE values than manually selected features in 18 out of 24 combinations (the number of acquisition methods x the number of regression methods excluding SVR). The MSE value averaged over 24 combinations is 1.527x10-2 for full features and 1.555 x10-2 that for manually selected features. The manual feature selection is marginally inferior to use of all features. It seems that, manual feature selection did not offer any advantage for prediction since the maximum number of features is relatively small (19). Furthermore, each PC is a linear combination of the original features, i.e. different parameters in the acquisition strategy, such as the gradient strength and its x, y and z components etc. So PCA mixes the original input parameters, which may not be helpful to reduce input parameters. Therefore, in the subsequent experiments, all features were used as model inputs for machine learning methods.<br><img src="//chen950203.github.io/2022/06/25/NAS_access/6.png" alt><br></p>
+<p>Fig. 6. Principal component analysis (PCA) of the feature space.<br>Table 1 Manually selected input features：&amp; cross;  represents the manually selected variable parameters; × represents the eliminated constant parameters<br><img src="//chen950203.github.io/2022/06/25/NAS_access/b1.png" alt><br></p>
+<p><img src="//chen950203.github.io/2022/06/25/NAS_access/7.png" alt><br></p>
+<p>Fig. 7. MSE for different prediction methods using different input features (all features, PCs, and manual selected features) a) DDE; b) DODE; c) PGSE-DSI; d) PGSE-MS.<br>We also investigated whether the normalization of input features affects the accuracy of dMRI signal prediction. We normalized each input feature into the range of [0 1]. The dMRI signals were predicted using the KNN for four acquisition strategies with and without normalization using 10-fold CV. The results are shown in Table 2. Normalizing the data had a similar prediction performance as without normalization. Therefore, in all subsequent experiments, we did not normalize the acquisition parameters for results reported in this work.<br>For NAS, since neural networks have the ability to extract features automatically, we used all features appearing in Table 1 as input variables.<br>Table 2 10-fold CV MSE for unnormalized and normalized features.<br><img src="//chen950203.github.io/2022/06/25/NAS_access/b2.png" alt><br></p>
+<p>Table 3 Mean squared errors (MSE) of the MLP with different depths on the validation data set.<br><img src="//chen950203.github.io/2022/06/25/NAS_access/b3.png" alt><br></p>
+<p><strong>3.3 Prediction performance</strong><br>We conducted additional experiments using MLP of 10, 13, 16, 19, and 22 layers (with hyperparameters optimized by NAS). The MSE values on the validation set from these MLP are listed in Table 3, which are worse than that of RNN-optimized 7-layer MLP, more substantially for DDE/DODE. The more complex the network, the worse performance. This may indicate the overfitting of MLP deeper than 7 layers. Therefore, 7 was used as the maximum layer of MLP as the state space of NSA for the following experiments.<br>The number of cells in RNN controller was 32 and the batch size of the child models was 64. The dimension of the output space for each layer of the 7-layer perceptron will be selected among (8, 16, 32, 64, 128) to get the least MSE via the gradient method which described in 3.3 section. Table 4 lists the parameter space for NAS.<br><img src="//chen950203.github.io/2022/06/25/NAS_access/8.png" alt><br></p>
+<p>Fig. 8. The loss curves of NAS for training and validation data<br>As can be seen from Fig. 8, during the training process, the loss values of training and validation data converged quickly, and no overfitting was observed for 200 epochs. Therefore, we set the number of training epochs to 200. The parameters of multilayer perceptron network optimized by NAS are shown in Table 5. Note that the number of layers was fixed as 7 and only the number of neurons in each layer was searched. The results of predicting dMRI signals by NAS of 7-layer perceptron network are shown in Fig. 9, from which we can see that the signals predicted by NAS match the original ones well for different acquisition strategies. Since the goal of this study to investigate the effectiveness of machine learning methods on quantitative prediction of dMRI data with different acquisition protocols, we focused on the quantitative accuracy evaluated by MSE (see Table 6). Nevertheless, we applied our NAS model on all image voxels (provided by the challenge organizer and not used in the training and validation process) and provided a set of typical images in Fig. 10. Our model is able to predict hundreds or thousands of these images that can be used for further calculation of diffusion parameters or WM tractography.<br>Table 4 Neural architecture search (NAS) parameters<br><br><img src="//chen950203.github.io/2022/06/25/NAS_access/b4.png" alt><br></p>
+<p><img src="//chen950203.github.io/2022/06/25/NAS_access/9.png" alt><br></p>
+<p>Fig. 9. The prediction results for different dMRI strategies through NAS: a) DDE; b) DODE; c) PGSE-DSI; d) PGSE-MS<br><img src="//chen950203.github.io/2022/06/25/NAS_access/10.png" alt></p>
+<p>Fig. 10. One brain image slice (top: mouse; bottom: human) predicted by NAS for different dMRI acquisition strategies: a) DDE; b) DODE; c) PGSE-DSI; d) PGSE-MS.<br>Table 5 The parameters for 7-layer perceptron network optimized by NAS for different acquisition strategies.<br><img src="//chen950203.github.io/2022/06/25/NAS_access/t5.png" alt><br></p>
+<p>Finally, we used the trained different regression models to predict the unseen test data provided by the challenge organizer and to quantify their prediction performance based on MSE. Note that these test data were never used in the training and validation process. The MSE results for different methods are shown in Table 6. It can be seen that the other regression methods do not work as well as NAS in general, except for PGSE-MS. NAS achieves excellent performance robustly across all acquisition strategies, particularly for DDE and DODE. For the PGSE strategies, NAS prediction is generally not as accurate as DDE and DODE. We believe that the reason for this phenomenon may be due to the weak characterization of the PGSE acquisition strategies, which leads to phase dispersion and signal attenuation. Although the prediction effect of NAS is not the best under the collection strategy of PGSE-MS, its prediction performance is in the similar order to the best performer, ET. However, the MSE for NAS predicted signals is the smallest, which demonstrate the multilayer perceptron regressor automatically designed by NAS is highly adaptable.<br>Table 6 Mean Squared Errors (MSE) for Different Regression Methods on the unseen test data<br><img src="//chen950203.github.io/2022/06/25/NAS_access/t6.png" alt><br></p>
+<p><strong>4. Discussion</strong><br>Although traditional regression methods, such as linear regression, decision trees, and KNN, have been applied to forecasting in areas like stocks and house prices, these methods usually require pre-processing of the data to achieve good performance, which not only requires domain knowledge, but also increases the time of processing. Some automatic feature selection techniques, such as PCA, may produce features that lead to better prediction performance, at the expense of ambiguity of the original features. In addition, some design experience or trail-and-error methods are needed to design good machine learning prediction methods. For example, in SVR, the nonlinear function mapping the original feature space to the higher dimensional feature space could be polynomials, Gaussian functions, or other base functions, which have to be tested to achieve the best prediction performance for dMRI signals.<br>NAS has been applied in many deep learning problems. Much of this technique is searching for optimal neural network structures by the gradient method. It is usually time-consuming for large scale problems. For the small dataset and the small search space (the number of neurons in each layer of a 7-layer perceptron network, 57 possibilities) in this work, NAS can identify the suitable number of neurons in a short time. For example, for the four acquisition strategies DDE, DODE, PGSE-DSI and PGSE-MS, the NAS training takes 67s, 168s, 110s and 121s, respectively. As this process is automatic and efficient, it holds a great advantage over exhaustive search over the possible combinations of the network structures, even for the relatively small scale of the current work with 57 possibilities.<br>For the pre-processing of the data, we did not use normalization. it is worth noting that although sometimes pre-processing of the data can be effective, probabilistic models, such as decision trees and random forests, may not need them. We empirically demonstrated that normalization did not provide meaningful improvement in prediction of dMRI signals.<br>Tested on the dMRI challenge data from human and mouse cells, our proposed NAS-based deep learning algorithms achieved better prediction performance than traditional machine learning methods. We believe that their performance could be further improved if a larger training data set were used.<br><strong>5. Conclusion</strong><br>In this paper, we investigated different kinds of regression methods to predict human and mouse dMRI signals using their corresponding acquisition parameters. We presented the application of neural architecture search techniques to the field of dMRI signal prediction. By modeling dMRI signals of human and mouse through a multilayer perceptron, the optimal network structure was determined by NAS to effectively predict dMRI signals at unknown voxels based on known acquisition parameters. Although we applied feature selection for traditional machine learning methods, such as SVR, KNN and decision trees, to improve their prediction performance, our NAS-designed multilayer perceptron regressor can reduce the mean squared error of the prediction largely, particularly for DDE and DODE, compared to other regression methods, and is robust across different acquisition strategies.<br><strong>References</strong><br>Altman, N.S. (1992) An introduction to Kernel and nearest-neighbor nonparametric regression. %J The American Statistician. 175.<br>Anirban, M., Shankar, B.P., Sudipta, R., Somasis, R. &amp; Kumar, S.S. (2018) The region of interest localization for glaucoma analysis from retinal fundus image using deep learning. %J Computer methods and programs in biomedicine. 165.<br>Breiman, L., Friedman, J., Olshen, R. &amp; Stone, C.J.  (Year) Classification and Regression Trees. City.<br>Breiman, L.J.M.l. (2001) Random forests. 45, 5-32.<br>Chang, B., Yang, R., Guo, C., Ge, S. &amp; Li, L. (2019) Performance evaluation and prediction of rudders based on machine learning technology %J Proceedings of the Institution of Mechanical Engineers, Part G: Journal of Aerospace Engineering. 233.<br>Chang, C.-C., Lin, C.-J.Email Author View Correspondence (2011) LIBSVM: A Library for support vector machines(Article) %J ACM Transactions on Intelligent Systems and Technology.<br>Chen, H., Zhang, Z., Yin, W., Wang, M., Lifan, M. &amp; Hao, X.  (Year) Hybrid Neural Network based on Feature Fusion for Vehicle Type Identification. 2020 IEEE International Instrumentation and Measurement Technology Conference (I2MTC). City. p. 1-5.<br>Drucker, H. (1997) Improving Regressors Using Boosting Techniques.<br>Dyrby, T.B., Innocenti, G.M., Bech, M. &amp; Lundell, H. (2018) Validation strategies for the interpretation of microstructure imaging using diffusion MRI(Review) %J NeuroImage. 62-79.<br>Elsken, T., Metzen, J.H. &amp; Hutter, F. (2019) Neural Architecture Search: A Survey. %J Journal of Machine Learning Research. 1-21.<br>Enrico, K., D, K.N., P, C.R., D, D.M. &amp; C, A.D. (2016) Multi-compartment microscopic diffusion imaging. %J NeuroImage. 139.<br>Friedman, J.H. (2001) Greedy Function Approximation: A Gradient Boosting Machine %J The Annals of Statistics. 1189-1232.<br>Froeling, M., 1, Tax, C.M.W., Vos, S.B., 3, Luijten, P.R. &amp; Leemans, A. (2017) “MASSIVE” brain dataset: Multiple acquisitions for standardization of structural imaging validation and evaluation.[Article] %J Magnetic Resonance in Medicine. 1797-1809.<br>Geurts, P.D.o.E.E., Computer Science, U.o.L., Liège, Belgium, P.Geurts@ulg.ac.be, Ernst, D.D.o.E.E., Computer Science, U.o.L., Liège, Belgium, Dernst@ulg.ac.be, Wehenkel, L.D.o.E.E. &amp; Computer Science, U.o.L., Liège, Belgium, L.Wehenkel@ulg.ac.be (2006) Extremely randomized trees %J Machine Learning. 3-42.<br>Hinton, G., Deng, L. &amp; Yu, D. (2012) DEEP NEURAL NETWORKS FOR ACOUSTIC MODELING IN SPEECH RECOGNITION %J IEEE SIGNAL PROCESSING MAGAZINE. 16.<br>Hoy, A.R., Ly, M., Carlsson, C.M., Okonkwo, O.C., Zetterberg, H., Blennow, K., Sager, M.A., Asthana, S., Johnson, S.C., Alexander, A.L. &amp; Bendlin, B.B. (2017) Microstructural white matter alterations in preclinical Alzheimer’s disease detected using free water elimination diffusion tensor imaging(Article) %J PLoS ONE.<br>Ianuş, A., Jespersen, S., Duarte, T., Alexander, D., Drobnjak, I. &amp; Shemesh, N. (2018) Accurate estimation of microscopic diffusion anisotropy and its time dependence in the mouse brain %J NeuroImage. 934-949.<br>Jin, M. &amp; Deng, W. (2018) Predication of different stages of Alzheimer’s disease using neighborhood component analysis and ensemble decision tree(Article) %J Journal of Neuroscience Methods. 35-41.<br>Koduri, S.B., Gunisetti, L., Ramesh, C.R., Mutyalu, K.V. &amp; Ganesh, D. (2019) Prediction of crop production using adaboost regression method %J Journal of Physics: Conference Series. 012005.<br>Krizhevsky, A., Sutskever, I. &amp; Hinton, G.E. (2017) ImageNet classification with deep convolutional neural networks %J Communications of the ACM. 84-90.<br>Lecun, Y., Bottou, L., Bengio, Y. &amp; Haffner, P. (1998) Gradient-based learning applied to document recognition %J Proceedings of the IEEE. 2278-2324.<br>Lim, B. &amp; Schaar, M.v.d. (2018) Forecasting Disease Trajectories in Alzheimer’s Disease Using Deep Learning.<br>Marblestone, A.H., Wayne, G. &amp; Kording, K. (2016) Towards an integration of deep learning and neuroscience %J Frontiers in Computational Neuroscience.<br>Pereira, S., Pinto, A., Alves, V. &amp; Silva, C.A. (2016) Brain Tumor Segmentation Using Convolutional Neural Networks in MRI Images %J IEEE Transactions on Medical Imaging. 1240-1251.<br>Sergio, P., Adriano, P., Victor, A. &amp; A, S.C. (2016) Brain Tumor Segmentation Using Convolutional Neural Networks in MRI Images. %J IEEE transactions on medical imaging. 35.<br>Shemesh, N., Ozarslan, E., Komlosh, M.E., Basser, P.J. &amp; Cohen, Y. (2010) From single-pulsed field gradient to double-pulsed field gradient MR: gleaning new microstructural information and developing new forms of contrast in MRI %J NMR in biomedicine. 757-780.<br>Shen1, D., Wu1, G. &amp; Suk2, H.-I. (2017) Deep Learning in Medical Image Analysis %J Annual Review of Biomedical Engineering. 221-248.<br>Stejskal, E.O. &amp; Tanner, J.E. (1965) Spin diffusion measurements: Spin echoes in the presence of a time-dependent field gradient %J The Journal of Chemical Physics. 288-292.<br>Williams, R.J. (1992) Simple statistical gradient-following algorithms for connectionist reinforcement learning. %J Machine Learning. 229-256.<br>Zoph, B. &amp; Le, Q.V. (2016) Neural architecture search with reinforcement learning [arXiv] %J arXiv. 15.</p>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #7EC0EE;
+            text-shadow: 0
+        }
+</style>
+	
+<div class="btn_click_load" id="disqus_bt"> 
+    <button class="disqus_click_btn">点击查看评论</button>
+</div>
+
+<!--
+<script type="text/javascript">
+$('.btn_click_load').click(function() {
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'http-chen950203-github-io'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    document.getElementById('disqus_bt').style.display = "none";
+});
+</script>
+-->
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://chen950203.github.io/2022/06/25/NAS_access/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://chen950203.github.io/2022/06/25/NAS_access/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/javascript">
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//http-chen950203-github-io.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="http://chen950203.github.io " style="border-bottom: none;">陈昊泽</a></li>
+            </ul>
+            
+                <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>

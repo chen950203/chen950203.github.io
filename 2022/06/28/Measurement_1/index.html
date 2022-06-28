@@ -1,0 +1,258 @@
+<!DOCTYPE HTML>
+<html>
+
+<head><meta name="generator" content="Hexo 3.9.0">
+	<link rel="bookmark" type="image/x-icon" href="/img/logo_miccall.png">
+	<link rel="shortcut icon" href="/img/logo_miccall.png">
+	
+			    <title>
+    chenhaoze.com
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="/css/mic_main.css">
+    <link rel="stylesheet" href="/css/dropdownMenu.css">
+    <meta name="keywords" content="chenhaoze">
+    
+    	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	 
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css">
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/df.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script async type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css">
+<link rel="stylesheet" href="/css/typo.css">
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">个人主页</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special">
+            <ul class="menu links">
+			<!-- Homepage  主页  --> 
+			<li>
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/DEEP-LEARNING/">DEEP LEARNING</a></li><li><a class="category-link" href="/categories/练习题/">练习题</a></li><li><a class="category-link" href="/categories/论文/">论文</a></li><li><a class="category-link" href="/categories/随笔/">随笔</a>
+	                    </li></ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="关于我">
+		                关于我
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/gallery/" title="图集">
+		                图集
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+			</ul>
+</nav>
+
+        <div id="main">
+            <div class="post_page_title_img" style="height: 25rem;background-image: url(https://chen950203.github.io/10.png);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;">
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2>Depth Classification by machine learning based on hyper-parameter search</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<p><strong>ABSTRACT :</strong> To overcome the low efficiency of crack depth detection of steel, we explored for the first time the method based on hyper-parameters search in the field of defect depth classification. And the effect of different defect depths on the heat transfer to the metal surface during heating and cooling process was analyzed. Moreover, we de-noise the infrared thermal images by median filtering algorithm. Then we propose two time-series temperature features: the crossing temperature feature and the temperature difference feature, and compared their robustness. We perform hyper-parameter search by grid search and random search, for KNN, SVM and random forest. Experiments prove that the temperature difference feature is effective in this study. The KNN based on grid search can achieve 100% accuracy. The SVM has the highest classification efficiency, that based on grid search and random search can achieve 100% classification accuracy in 0.63s and 0.78s, respectively.</p>
+<p><strong>I.INTRODUCTION</strong><br>Non-destructive testing (NDT) and evaluation is a key technology to ensure the quality and safety of major engineering equipment and product manufacturing, and is an effective means to ensure the quality of materials and achieve quality control. In industrial production, steel is used in a wide range of applications, such as rail transportation, aviation, ships and wind turbine blades. With the extension of service time, fatigue occurs in steel parts, which is a complex, multi-scale and random degradation process [1]. Cracks are the main form of steel surface defects. In order to diagnose the health condition of steel surface, many NDT methods are currently used to detect surface cracks, such as ultrasonic testing [2], liquid penetration testing [3], magnetic particle testing [4], computed tomography [5], eddy current testing [6], etc. However, all of the above NDT methods have drawbacks, and we present their shortcomings in Table 1. Infrared thermal imaging NDT has been widely used in the field of detection of small surface defects due to its advantages of non-contact, fast detection, high sensitivity, and real-time detection. Compared with conventional NDT techniques, it has the advantages of fast detection speed, applicability to various types of thermally conductive materials and more intuitive detection results. Traditionally, infrared thermography is used to apply a heat source to the surface of a sample by a laser [7], eddy current [8] or halogen lamp [9], and then an infrared camera is used to capture the heat distribution on the surface. When there are defects on the metal surface, the heat flow from the sample surface is obstructed, thus changing the heat distribution. In recent years, more and more scholars are using infrared thermography to detect defects. Extensive research work on sample defect detection using active thermography based on pulsed, pulsed-phase, locked, stepped heating and vibrational thermography has been reported [10-14].The feasibility of using infrared thermography to measure defect depth, size, and thermal properties has proven to be effective [11, 15, 16].<br>Surface defects on sample will shorten service time and pose a threat to the safety of people in industrial production. As the depth of the crack increases, the greater the damage. Therefore, quantitative nondestructive testing and evaluation of defect depths have gained the attention of a wide range of scholars [17-21]. Similarly ultrasonic testing has come to be used as a method for depth evaluation of defects [22]. Jiang et al. explores the possibility of combing the laser-ultrasonic technology and a hybrid intelligent method to fast achieve classification and evaluation of artificial rolling contact fatigue (RCF) defect in different depths [23]. Recently, many scholars have evaluated the depth of material surface defects by eddy current NDT [24, 25]. Dong et al. built a build a reflective lock-in thermography system for simultaneous subsurface defect detection and depth estimation [26]. Azizinasab et al. proposed phase of transient response using the local reference pixel vector (PTR-LRPV) to process pulsed thermography data for defect detection and depth estimation in carbon fiber reinforced polymer specimens [27]. Wang et al. utilize a laser infrared thermography (LIT) system to inspect an aviation CFRP sheet and adopt a long-short term memory recurrent neural network (LSTM-RNN) to determine the defect depth [28]. But the design of neural networks requires a lot of time cost for designers. McClanahan et al. proposed a resonant technique for accurate depth assessment of long and shallow surface damage (scratches or cracks) [29]. Maldague et al. attempted to predict the defect depth in the frequency domain using the discrete Fourier transform (DFT) [30]. However, this method requires the extraction of signal eigenvalues in the frequency domain, which increases the complexity of the algorithm. Beate derived a general normalization function for vertical cracks and optimized the experimental parameters according to different materials to reach a method to detect surface cracks and estimate their depth [31]. This method is affected by the heating power, and if the heating power is low, the noise of the infrared image is obvious, which seriously affects the detection effect. Beate presented equations for the temperature variation around acoustic surfaces and surface cracks for semi-infinite and finite thickness bodies, which eliminates the orientation dependence of the crack detection [32] and this method requires the design of complex Helmholtz induction coils and is not easy to implement. In recent years, deep learning has also started to be applied to classification and prediction of defect depth [33, 34]. However, deep learning-based defect detection methods are more time-consuming, due to the complex design of neural network structures. In our previous work, we have achieved promising classification results and reduced the classification time by using neural architecture search to classify defects of different depths. [35]. In this paper, we aim to explore the effectiveness of conventional machine learning classifiers for depth classification of defects.<br>With the development of artificial intelligence, various artificial intelligence algorithms for classification and feature extraction have been developed, which greatly improve the performance of defect monitoring [36-41]. Lee et al. develop a welding monitoring system using a spectrometer and artificial intelligence algorithms [42]. Zhang et al. achieved effective identification of seven classes of defects by the multi-class SVM method [43]. However, this work requires manual adjustment of the SVM parameters, which takes a long time for scholars.<br>Machine learning (ML) based classification is a supervised learning process where what categories are known in the target database, and all the classification process needs to do is to assign each record to the corresponding category. Machine learning classifiers mainly include support vector machine (SVM) [44], k-nearest neighbor (KNN) [45], bayesian classifier [46] and decision trees [47].<br>Table 1<br>Limitations of different non-destructive testing methods.<br><img src="//chen950203.github.io/2022/06/28/Measurement_1/t1.png"><br>The detection algorithms above have been applied to the detection of defect depth, they all have own shortcomings. Defect classification based on neural networks is a time-consuming work. Some methods based on the specific characterize time to predict the defect depth of all methods are based on one-dimensional heat conduction, and do not consider the three-dimensional heat diffusion. In order to make ML models suitable for different problems, hyper-parameters must be tuned. Choosing the Optimal hyper-parameter configuration for a ML model directly affects the performance of the model. It usually requires an in-depth knowledge of machine learning algorithms and appropriate hyper-parameter optimization techniques. To overcome the shortcomings of these methods, we optimize the ML classifier for efficient and fast classification of steel plate defect depths.<br>In this paper, we first build a defect detection system based on laser pulse thermography, where a semiconductor laser generates pulsed laser and subsequently records the temperature change on the surface of the inspected sample by infrared thermography. The effect of defects at different depths on the heat transfer to the metal surface was then analyzed by the temperature variation of the region of interest in the infrared images. Next, the defects as well as their line temperature values at 1mm above and below are recorded in the infrared thermal image within 2s and differenced to obtain the final temperature difference features by extracting different kinds of temperature features and applying them in hyper-parameter optimization KNN, SVM and random forest (RF) for final classification.<br>This paper is organized as follows, in Section 2, the workflow of this paper is introduced in details; Section 3 details the principles of heat conduction and the machine learning algorithms involved in this paper. In section 4, the experimental setup is described and the sample defect types are shown. Section 5 describes the infrared image analysis and temperature feature extraction. The experimental results are presented in Section 6. The discussions are given in Section 7. Finally, Section 8 provides conclusions.<br><strong>2. WORKFLOWS</strong><br>We divide this defective depth classification study into three steps: data acquisition, feature extraction and analysis, classification. The semiconductor laser generates a pulsed laser with a pulse width of 1s to heat 2mm below the defect, followed by an infrared thermal imaging camera to capture pictures of the temperature sequence within 2s (200 frames) of the laser generation. The extraction and analysis of features are mainly to extract effective temperature feature values for different locations in the infrared thermal image with time. Step 3 focuses on optimizing the hyper-parameters of the classifier by different algorithms, such as SVM, KNN and RF, in order to achieve classification. Fig. 1 shows the flowchart of this study.</p>
+<p><img src="//chen950203.github.io/2022/06/28/Measurement_1/1.png"><br>Fig. 1. The flowchart of this study.</p>
+<p><strong>3.  THEROETICAL BASIS</strong><br><strong>3.1 PULSE THERMOGRAPHY</strong><br>For a sample of semi-infinite and opaque material containing infinite vertical cracks, its surface is irradiated by a pulsed laser with a Gaussian profile and energy of Qo. The radius of the laser spot is a and its center distance from the crack is d. When the laser power is Po and the frequency is   , the temperature of any point in the material has been solved in the frequency domain when the above conditions are satisfied:</p>
+<center>$T(x,y,z,w)=\frac{P_0}{\sqrt{2\pi \rho K}}\int_0^{+\infty} \delta J_0(\delta r_0) \frac{e^{-((\delta a)^2 /8}}{\beta}$ 
+$+ sign(y) \frac{P_0 K R_{th}}{\pi ^2 a^2 K}\int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty}\mathrm{d}x_0 \mathrm{d}y_0 \mathrm{d}\delta e^\frac{2[x_0^2+(y_0-d)^2]}{a^2} \delta J_0(\delta r_1)sign(y_0) \frac{-\beta(|y_0|+|y|)}{2+K R_{th} \beta}\qquad (1)$</center><br>
+
+<p>Where, $ r_0=\sqrt{x^2+(y-d)^2+z^2},r_1= \sqrt{(x-x_0)^2+z^2},\beta=\sqrt{\delta^2+iw/a}, J_0$ is the Bessel function of zero order, the sign function is equal to +1 for all positive values of its argument and is equal to -1 for the negative ones, $K$ and $α$ are the thermal conductivity and diffusivity of the material respectively.</p>
+<p>Finally, $R_{th}$ is the thermal contact resistance of the crack related to the air gap thickness L through $R_{th}=\frac{L}{K_{air}}$.<br><br>When a laser is projected onto the surface of the steel sample, the temperature of the surface increases in the form of pulses, and this type of thermal imaging is called pulsed thermography [48]. The temperature of the sample surface will go through two processes, one is the increase in the form of pulses and the other is the cooling process. When the sample material is homogeneous, isotropic, and semi-infinite in size, the 3D heat conduction in such a material can be expressed as [48, 49]:<br></p>
+<center>$\frac{\partial^2 T}{\partial x^2}+\frac{\partial^2 T}{\partial y^2}+\frac{\partial^2 T}{\partial z^2}-\frac{1}{k}\cdot \frac{\partial T}{\partial t}=-\frac{q^{'''}}{K}\qquad (2)$</center>
+
+<p>where $T$ is the temperature rise. $K$ and $k$ are respectively the thermal conductivity ($W \cdot K^{-1} \cdot m^{-1}$) and diffusivity ($m^2/s$). Their relationship is:  .   is the density of the material ($kg/m^3$), and $C$ is the specific heat of the material ($J\cdot kg^{-1}\cdot K$). $q^{’’’}$ is the heat produced per unit volume per unit time, in unit of $W/m^3$.<br>The temperature of the sample at time t at depth d can be determined by the following equation:</p>
+<center>$T(d,t)=\frac{Q_0}{\sqrt{\pi \rho ckt}}e^{\frac{-d^2}{\sqrt{4at}}}\qquad (3)$</center>
+Where $Q_0$ denotes the input energy density, T denotes the sample temperature,   denotes the density, c denotes the thermal conductivity, and k denotes the thermal diffusivity.
+
+<p><strong>3.2 Machine Learning (ML) Methods</strong><br><strong>3.2.1 Support Vector Machine (SVM)</strong><br>A support vector machines (SVM) belongs to supervised learning algorithms whose basic model is defined as a linear classifier with maximum interval on the feature space. The SVM algorithm can map data points from low-dimensional to high-dimensional space in order to make them linearly separable; then a hyperplane is generated as a classification boundary to classify different classes of data points. Suppose there are n data points and the objective function of the SVM is:<br>更新时间：2022.6.28</p>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #7EC0EE;
+            text-shadow: 0
+        }
+</style>
+	
+<div class="btn_click_load" id="disqus_bt"> 
+    <button class="disqus_click_btn">点击查看评论</button>
+</div>
+
+<!--
+<script type="text/javascript">
+$('.btn_click_load').click(function() {
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'http-chen950203-github-io'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    document.getElementById('disqus_bt').style.display = "none";
+});
+</script>
+-->
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'https://chen950203.github.io/2022/06/28/Measurement_1/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://chen950203.github.io/2022/06/28/Measurement_1/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/javascript">
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//http-chen950203-github-io.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="http://chen950203.github.io " style="border-bottom: none;">陈昊泽</a></li>
+            </ul>
+            
+                <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>

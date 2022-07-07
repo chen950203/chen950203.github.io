@@ -155,6 +155,20 @@ SVM is a machine learning method based on statistical theory proposed by Vapnik 
 <center>$w^T \varphi (x)+b=0\qquad (5)$</center>
 where, $w$ is the weight coefficient matrix; $b$ is the threshold; $\varphi (x)$ is the mapping function; $x$ is the support vector.
 The SVM search for the optimal hyperplane process ensures smooth functional relationships by minimizing the sum of squares of the weight coefficients; errors less than $\varepsilon$ are tolerated by solving the following quadratic convex programming problem to determine $w$ and $b$ :
+<center>$\underset{w, b, \zeta_i, \zeta_i^*}{min} \frac {1}{2}||w||^2+C \sum_{i=1}^{n}(\zeta_i+\zeta_i^*)\qquad (6)$</center>
+The constraints are:
+
+<center>$\begin{cases} y_i-w^T\varphi(x_i)-b\leq {\varepsilon +\zeta_i} \\\\w^T\varphi(x_i)+b-y_i\leq  \varepsilon +\zeta_i^*\\\\\zeta_i,\zeta_i^*>0 \\\\(i=1,2,...,n) \end{cases}\qquad (7)$</center>
+
+<p>where, $\zeta_i,\zeta_i^*$ are the relaxation variables; $C$ is the penalty factor, $C&gt;0$; $\varepsilon$ is the allowable error; $x_i$ is the ith sample vector; $y_i$ is the output value of $x_i$.<br><strong>3.3    Grey Wolf Optimizer (GWO)</strong><br>The GWO algorithm mimics the leadership hierarchy and hunting mechanism of grey wolves in nature which was first proposed in 2014 by Mirjalili et al [48]. Four types of grey wolves such as alpha, beta, delta, and omega are employed for simulating the leadership hierarchy. The GWO algorithm consists of three main steps: encircling prey， hunting prey and attacking prey. The encircling prey can be expressed by (8) and (9).</p>
+<center>$D_i=|C_i \cdot x_p(t)-x_i(t)| \qquad (8)$</center>
+<center>$x_i(t+1)=x_p(t)-A_i \cdot D_i \qquad (9)$</center>
+
+<p>where the position of the ith grey wolf, the current iteration and the position of the prey are denoted by $x_i$, $t$ and $x_p$. The vectors $A$ and $C$ are control parameters that are calculated by (10) and (11).</p>
+<center>$A_i=2a \cdot r_i-a \qquad (10)$</center>
+<center>$C_i=2r_2 \qquad (11)$</center>
+
+<p>where $r_1$ and $r_2$ are random vector in [0, 1], and a is linearly decreased from 2 to 0 over the course of iterations computed by (12).</p>
 
             </div>
 
